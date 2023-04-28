@@ -8,8 +8,11 @@ import com.zheng.game.SpaceShooterGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-//		config.height = 640;
-//		config.width = 360;
+//		config.height = 128;
+//		config.width = 72;
+		int height =640;
+		int width = 360;
+		config.setWindowSizeLimits(width,height,width,height);
 		config.setForegroundFPS(60);
 		config.setTitle("SpaceShooter");
 		new Lwjgl3Application(new SpaceShooterGame(), config);
